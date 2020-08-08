@@ -5,9 +5,10 @@
 <body>
 <script>
 // Player's selection
-rawPlayerSelection = prompt("Rock, Paper, Scissors Game! Please type Rock, Paper, or Scissors!");
 
-const playerSelection = rawPlayerSelection.toLowerCase();
+const rawPlayerSelection = prompt("Rock, Paper, Scissors Game! Please type Rock, Paper, or Scissors!");
+
+const playerSelection= rawPlayerSelection.toLowerCase();
 
 // computer's selection
 function computerPlay(){
@@ -47,6 +48,10 @@ function playRound(playerSelection, computerSelection) {
         return "Tie!! You both chose Rock!!"
     } else if (playerSelection==="paper" && computerSelection==="paper"){
         return "Tie!! You both chose Paper!!"
+    }
+//player input not an option
+    else {
+        return "Oops! That's not an option. Please try again!";
     }
 }
 console.log(playRound(playerSelection, computerSelection))
