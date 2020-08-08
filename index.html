@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+<script>
+// Player's selection
+rawPlayerSelection = prompt("Rock, Paper, Scissors Game! Please type Rock, Paper, or Scissors!");
+
+const playerSelection = rawPlayerSelection.toLowerCase();
+
+// computer's selection
+function computerPlay(){
+    result=Math.floor(Math.random()*3);
+    if (result===0){
+        return "rock";
+    } else if (result===1){
+        return "paper";
+    } else {
+        return "scissors";
+    }
+}
+const computerSelection = computerPlay();
+
+// Winner
+function playRound(playerSelection, computerSelection) {
+//player wins	
+    if (playerSelection==="rock" && computerSelection==="scissors"){
+        return "You chose Rock and Computer chose Scissors! You Win!!"
+    } else if (playerSelection==="paper" && computerSelection==="rock"){
+        return "You chose Paper and Computer chose Rock! You Win!!"
+    } else if (playerSelection==="scissors" && computerSelection==="paper"){
+        return "You chose Scissors and Computer chose Paper! You Win!!"
+    } 
+//computer wins
+    else if (playerSelection==="scissors" && computerSelection=== "rock"){
+        return "You chose Scissors and Computer chose Rock! Computer Wins!!"
+    } else if (playerSelection==="rock" && computerSelection==="paper"){
+        return "You chose Rock and Computer chose Paper! Computer Wins!!"
+    } else if (playerSelection==="paper" && computerSelection==="scissors"){
+        return "You chose Paper and Computer chose Scissors! Computer Wins!!"
+    }
+//tie: both choose same thing
+    else if (playerSelection==="scissors" && computerSelection=== "scissors"){
+        return "Tie!! You both chose Scissors!!"
+    } else if (playerSelection==="rock" && computerSelection==="rock"){
+        return "Tie!! You both chose Rock!!"
+    } else if (playerSelection==="paper" && computerSelection==="paper"){
+        return "Tie!! You both chose Paper!!"
+    }
+}
+console.log(playRound(playerSelection, computerSelection))
+
+</script>
+</body>
