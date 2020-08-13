@@ -1,13 +1,24 @@
 <body>
 <script>
+
 //scorekeeping variables
 let round=0;
 let playerScore=0;
 let computerScore=0;
 
 //round 1
-// Player's selection 1
-const playerSelection1 = prompt("Rock, Paper, Scissors Game! Please type Rock, Paper, or Scissors!").toLowerCase();
+// player's selection 1
+function playerFunction1(){
+    let conditionalPlayerSelection1 = prompt("Rock, Paper, Scissors Game! Round 1 of 5. Please type Rock, Paper, or Scissors!").toLowerCase();
+    if (conditionalPlayerSelection1==="rock"
+    ||conditionalPlayerSelection1==="paper"
+    ||conditionalPlayerSelection1==="scissors"){
+        return conditionalPlayerSelection1;
+    } else {
+        playerFunction1()
+    }
+}
+const playerSelection1 = playerFunction1();
 
 // computer's selection 1
 function computerPlay1(){
@@ -25,21 +36,31 @@ const computerSelection1 = computerPlay1();
 function playRounds() {
     if (playerSelection1 === computerSelection1){
         round++;
-        alert("Tie!");
+        alert("Tie! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
     } else if (playerSelection1 === "rock" && computerSelection1 === "scissors" 
     || playerSelection1 === "paper" && computerSelection1 === "rock" 
     || playerSelection1 === "scissors" && computerSelection1 === "paper"){
         round++;
         playerScore++;
-        alert("Player wins!");
+        alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
     } else {
         round++;
         computerScore++;
-        alert("Computer wins!");
+        alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
     }
     //round 2
     //playerSelection 2
-    const playerSelection2 = prompt("Rock, Paper, Scissors Game! Please type Rock, Paper, or Scissors!").toLowerCase();
+    function playerFunction2(){
+        let conditionalPlayerSelection2 = prompt("Round 2 of 5. Please type Rock, Paper, or Scissors!").toLowerCase();
+        if (conditionalPlayerSelection2==="rock"
+            ||conditionalPlayerSelection2==="paper"
+            ||conditionalPlayerSelection2==="scissors"){
+            return conditionalPlayerSelection2;
+        } else {
+        playerFunction2()
+        }
+    }
+    const playerSelection2 = playerFunction2();
 
     // computer's selection 2
     function computerPlay2(){
@@ -57,24 +78,33 @@ function playRounds() {
     function playRound2() {
         if (playerSelection2 === computerSelection2){
             round++;
-            alert("Tie!");
+            alert("Tie! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         } else if (playerSelection2 === "rock" && computerSelection2 === "scissors"
         || playerSelection2 === "paper" && computerSelection2 === "rock"
         || playerSelection2 === "scissors" && computerSelection2 === "paper"){
             round++;
             playerScore++;
-            alert("Player wins!");
+            alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         } else {
             round++;
             computerScore++;
-            alert("Computer wins!");
+            alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         }
     }
     playRound2();
     //game 3
     //playerSelection 3
-    const playerSelection3 = prompt("Rock, Paper, Scissors Game! Please type Rock, Paper, or Scissors!").toLowerCase();
-
+    function playerFunction3(){
+        let conditionalPlayerSelection3 = prompt("Round 3 of 5. Please type Rock, Paper, or Scissors!").toLowerCase();
+        if (conditionalPlayerSelection3==="rock"
+        ||conditionalPlayerSelection3==="paper"
+        ||conditionalPlayerSelection3==="scissors"){
+        return conditionalPlayerSelection3;
+        } else {
+        playerFunction3()
+        }
+    }
+    const playerSelection3 = playerFunction3();
     // computer's selection 2
     function computerPlay3(){
         let result=Math.random(); 
@@ -91,24 +121,33 @@ function playRounds() {
     function playRound3() {
         if (playerSelection3 === computerSelection3){
             round++;
-            alert("Tie!");
+            alert("Tie! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         } else if (playerSelection3 === "rock" && computerSelection3 === "scissors"
         || playerSelection3 === "paper" && computerSelection3 === "rock"
         ||playerSelection3 === "scissors" && computerSelection3 === "paper"){
             round++;
             playerScore++;
-            alert("Player wins!");
+            alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         } else {
             round++;
             computerScore++;
-            alert("Computer wins!");
+            alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         }
     }
     playRound3();
     //round 4
     //playerSelection 4
-    const playerSelection4 = prompt("Rock, Paper, Scissors Game! Please type Rock, Paper, or Scissors!").toLowerCase();
-
+    function playerFunction4(){
+        let conditionalPlayerSelection4 = prompt("Round 4 of 5. Please type Rock, Paper, or Scissors!").toLowerCase();
+        if (conditionalPlayerSelection4==="rock"
+        ||conditionalPlayerSelection4==="paper"
+        ||conditionalPlayerSelection4==="scissors"){
+        return conditionalPlayerSelection4;
+        } else {
+        playerFunction4()
+        }
+    }
+    const playerSelection4 = playerFunction4();
     // computer's selection 4
     function computerPlay4(){
         let result=Math.random(); 
@@ -125,24 +164,33 @@ function playRounds() {
     function playRound4() {
         if (playerSelection4 === computerSelection4){
             round++;
-            alert("Tie!");
+            alert("Tie! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         } else if (playerSelection4 === "rock" && computerSelection4 === "scissors"
         || playerSelection4 === "paper" && computerSelection4 === "rock"
         || playerSelection4 === "scissors" && computerSelection4 === "paper"){
             round++;
             playerScore++;
-            alert("Player wins!");
+            alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         } else {
             round++;
             computerScore++;
-            alert("Computer wins!");
+            alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         }
     }
     playRound4();
     //round 5
     //playerSelection 5
-    const playerSelection5 = prompt("Rock, Paper, Scissors Game! Please type Rock, Paper, or Scissors!").toLowerCase();
-
+    function playerFunction5(){
+        let conditionalPlayerSelection5 = prompt("Round 5 of 5. Last round. Please type Rock, Paper, or Scissors!").toLowerCase();
+        if (conditionalPlayerSelection5==="rock"
+        ||conditionalPlayerSelection5==="paper"
+        ||conditionalPlayerSelection5==="scissors"){
+        return conditionalPlayerSelection5;
+        } else {
+        playerFunction5()
+        }
+    }
+    const playerSelection5 = playerFunction5();
     // computer's selection 5
     function computerPlay5(){
         let result=Math.random(); 
@@ -159,17 +207,17 @@ function playRounds() {
     function playRound5() {
         if (playerSelection5 === computerSelection5){
             round++;
-            alert("Tie!");
+            alert("Tie! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         } else if (playerSelection5 === "rock" && computerSelection5 === "scissors"
         || playerSelection5 === "paper" && computerSelection5 === "rock"
         || playerSelection5 === "scissors" && computerSelection5 === "paper"){
             round++;
             playerScore++;
-            alert("Player wins!");
+            alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         } else {
             round++;
             computerScore++;
-            alert("Computer wins!");
+            alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
         }
     }
     playRound5();
