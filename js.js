@@ -19,6 +19,18 @@ document.getElementById("scissors").addEventListener('click', function(){
     document.getElementById('pc').textContent = 'Scissors';
 });
 
+//player score
+
+let defaultPlayerScore = 0;
+document.getElementById('playerScore').textContent = defaultPlayerScore;
+
+//computer score
+
+let defaultComputerScore = 0;
+document.getElementById('computerScore').textContent = defaultComputerScore;
+
+//game
+
 function playRound(x) {
 
     // player's selection
@@ -46,12 +58,16 @@ function playRound(x) {
     
     if ((playerSelection==="rock" && computerSelection==="scissors") || (playerSelection==="paper" && computerSelection==="rock") || (playerSelection==="scissors" && computerSelection==="paper")){
         document.getElementById('r').textContent = 'Player Wins!';
+        defaultPlayerScore += 1;
+        document.getElementById('playerScore').textContent = defaultPlayerScore;
     } 
     
     // case computer wins
     
     else if ((playerSelection==="scissors" && computerSelection=== "rock") || (playerSelection==="rock" && computerSelection==="paper") || (playerSelection==="paper" && computerSelection==="scissors")){
         document.getElementById('r').textContent = 'Computer Wins!';
+        defaultComputerScore += 1;
+        document.getElementById('computerScore').textContent = defaultComputerScore;
     } 
     
     // case tie
@@ -60,3 +76,9 @@ function playRound(x) {
         document.getElementById('r').textContent = 'Tie!';
     } 
 }
+
+// reload / start over
+
+document.getElementById('reload').addEventListener('click', function() {
+    location.reload()
+});

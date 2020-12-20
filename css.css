@@ -1,10 +1,13 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
 #container {
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     height: 100vh;
 }
 header {
-    background-color: aliceblue;
+    background-color: lightblue;
 }
 header h1 {
     text-align: center;
@@ -14,16 +17,17 @@ header h2 {
 }
 div > h2 {
     text-align: center;
-    margin-top: 6%;
+    margin-top: 2rem;
 }
 #playerbtns {
     background-color: antiquewhite;
     text-align: center;
 }    
-#playerbtns button {
+button {
     margin: 2.5em 1.5em;
     height: 3em;
     width: 8em;
+    font-weight: bold;
 }
 #playerChoice {
     background-color: aqua;
@@ -31,13 +35,20 @@ div > h2 {
 #computerChoice {
     background-color: aquamarine;
 }
-#gameResult {
-    background-color: azure;
+#result {
+    background-color: lightpink;
+}
+#score {
+    background-color: cadetblue;
+    text-align: center;
+    padding-top: 2rem;
+}
+#score h2 {
+    display: inline;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 footer {
     background-color: lightblue;
-}
-footer > h3 {
     text-align: center;
-    margin-top: 6%;
 }
