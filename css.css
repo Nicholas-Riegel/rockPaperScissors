@@ -8,16 +8,29 @@ body {
 }
 header {
     background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 header h1 {
-    text-align: center;
+    display: flex;
+    justify-content: center; 
+    margin: 0 0 0 0;
 }
 header h2 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 0;
+    width: 100%;
+    flex-direction: row;
 }
-div > h2 {
-    text-align: center;
-    margin-top: 2rem;
+h2 {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 0;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
 }
 #playerbtns {
     background-color: antiquewhite;
@@ -26,27 +39,29 @@ div > h2 {
 button {
     margin: 2.5em 1.5em;
     height: 3em;
-    width: 8em;
+    width: 20%;
     font-weight: bold;
+    font-size: 1.1em;
 }
 #playerChoice {
     background-color: aqua;
+    display: flex;
+    justify-content: center;
 }
 #computerChoice {
     background-color: aquamarine;
+    display: flex;
+    justify-content: center;
 }
 #result {
     background-color: lightpink;
+    display: flex;
+    justify-content: center;
 }
 #score {
     background-color: cadetblue;
-    text-align: center;
-    padding-top: 2rem;
-}
-#score h2 {
-    display: inline;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
 }
 footer {
     background-color: lightblue;

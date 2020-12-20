@@ -58,7 +58,7 @@ function playRound(x) {
     
     if ((playerSelection==="rock" && computerSelection==="scissors") || (playerSelection==="paper" && computerSelection==="rock") || (playerSelection==="scissors" && computerSelection==="paper")){
         document.getElementById('r').textContent = 'Player Wins!';
-        defaultPlayerScore += 1;
+        defaultPlayerScore++;
         document.getElementById('playerScore').textContent = defaultPlayerScore;
     } 
     
@@ -66,7 +66,7 @@ function playRound(x) {
     
     else if ((playerSelection==="scissors" && computerSelection=== "rock") || (playerSelection==="rock" && computerSelection==="paper") || (playerSelection==="paper" && computerSelection==="scissors")){
         document.getElementById('r').textContent = 'Computer Wins!';
-        defaultComputerScore += 1;
+        defaultComputerScore++;
         document.getElementById('computerScore').textContent = defaultComputerScore;
     } 
     
