@@ -1,234 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta lang="en" charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css.css">
+</head>
 <body>
-<script>
-    
-//scorekeeping variables
-let round=0;
-let playerScore=0;
-let computerScore=0;
-    
-//game
-function game() {
-    //round 1
-    function round1(){
-        // player's selection 1
-        function playerChoice1(){
-            let conditionalPlayerChoice1 = prompt("Rock, Paper, Scissors Game! Round 1 of 5. Please type Rock, Paper, or Scissors!").toLowerCase();
-            if (conditionalPlayerChoice1==="rock"
-            ||conditionalPlayerChoice1==="paper"
-            ||conditionalPlayerChoice1==="scissors"){
-                return conditionalPlayerChoice1;
-            } else {
-                playerChoice1()
-            }
-        }
-        const playerSelection1 = playerChoice1();
-    
-        // computer's selection 1
-        function computerChoice1(){
-            let result=Math.random(); 
-            if (result<.33){
-                return "rock";
-            } else if (result<.67){
-                return "paper";
-            } else {
-                return "scissors";
-            }
-        }
-        const computerSelection1 = computerChoice1();
-        if (playerSelection1 === computerSelection1){
-            alert("Tie! Please play again. Please type Rock, Paper or Scissors.");
-            round1();
-            } else if (playerSelection1 === "rock" && computerSelection1 === "scissors" 
-            || playerSelection1 === "paper" && computerSelection1 === "rock" 
-            || playerSelection1 === "scissors" && computerSelection1 === "paper"){
-            round++;
-            playerScore++;
-            alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            } else {
-            round++;
-            computerScore++;
-            alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-        }
-    }
-    round1();
-    //round 2    
-    function round2() {
-            //playerSelection 2
-    function playerChoice2(){
-            let conditionalPlayerChoice2 = prompt("Round 2 of 5. Please type Rock, Paper, or Scissors!").toLowerCase();
-            if (conditionalPlayerChoice2==="rock"
-                ||conditionalPlayerChoice2==="paper"
-                ||conditionalPlayerChoice2==="scissors"){
-                return conditionalPlayerChoice2;
-            } else {
-            playerChoice2()
-            }
-    }
-    const playerSelection2 = playerChoice2();
-    
-    // computer's selection 2
-    function computerChoice2(){
-            let result=Math.random(); 
-            if (result<.34){
-                return "rock";
-            } else if (result<.67){
-                return "paper";
-            } else {
-                return "scissors";
-            }
-    }
-    const computerSelection2 = computerChoice2();
-
-            if (playerSelection2 === computerSelection2){
-                alert("Tie! Please play again. Please type Rock, Paper or Scissors.");
-                round2();
-            } else if (playerSelection2 === "rock" && computerSelection2 === "scissors"
-            || playerSelection2 === "paper" && computerSelection2 === "rock"
-            || playerSelection2 === "scissors" && computerSelection2 === "paper"){
-                round++;
-                playerScore++;
-                alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            } else {
-                round++;
-                computerScore++;
-                alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            }
-    }
-    round2();
-    //round 3
-    function round3() {
-        //playerSelection 3
-        function playerChoice3(){
-            let conditionalPlayerChoice3 = prompt("Round 3 of 5. Please type Rock, Paper, or Scissors!").toLowerCase();
-            if (conditionalPlayerChoice3==="rock"
-            ||conditionalPlayerChoice3==="paper"
-            ||conditionalPlayerChoice3==="scissors"){
-            return conditionalPlayerChoice3;
-            } else {
-            playerChoice3()
-            }
-        }
-        const playerSelection3 = playerChoice3();
-        // computer's selection 3
-        function computerChoice3(){
-            let result=Math.random(); 
-            if (result<.34){
-                return "rock";
-            } else if (result<.67){
-                return "paper";
-            } else {
-                return "scissors";
-            }
-        }
-        const computerSelection3 = computerChoice3();
-    
-        if (playerSelection3 === computerSelection3){
-                alert("Tie! Please play again. Please type Rock, Paper or Scissors.");
-                round3();
-            } else if (playerSelection3 === "rock" && computerSelection3 === "scissors"
-            || playerSelection3 === "paper" && computerSelection3 === "rock"
-            ||playerSelection3 === "scissors" && computerSelection3 === "paper"){
-                round++;
-                playerScore++;
-                alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            } else {
-                round++;
-                computerScore++;
-                alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            }
-    }
-    round3();
-    //round 4
-    function round4() {
-        //playerSelection 4
-        function playerChoice4(){
-            let conditionalPlayerChoice4 = prompt("Round 4 of 5. Please type Rock, Paper, or Scissors!").toLowerCase();
-            if (conditionalPlayerChoice4==="rock"
-            ||conditionalPlayerChoice4==="paper"
-            ||conditionalPlayerChoice4==="scissors"){
-            return conditionalPlayerChoice4;
-            } else {
-            playerChoice4()
-            }
-        }
-        const playerSelection4 = playerChoice4();
-        // computer's selection 4
-        function computerChoice4(){
-            let result=Math.random(); 
-            if (result<.34){
-                return "rock";
-            } else if (result<.67){
-                return "paper";
-            } else {
-                return "scissors";
-            }
-        }
-        const computerSelection4 = computerChoice4();
-    
-    
-        if (playerSelection4 === computerSelection4){
-                alert("Tie! Please play again. Please type Rock, Paper or Scissors.");
-                round4();
-            } else if (playerSelection4 === "rock" && computerSelection4 === "scissors"
-            || playerSelection4 === "paper" && computerSelection4 === "rock"
-            || playerSelection4 === "scissors" && computerSelection4 === "paper"){
-                round++;
-                playerScore++;
-                alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            } else {
-                round++;
-                computerScore++;
-                alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            }
-    }
-    round4();
-    //round 5
-    function round5() {
-        //playerSelection 5
-        function playerChoice5(){
-            let conditionalPlayerChoice5 = prompt("Round 5 of 5. Last round. Please type Rock, Paper, or Scissors!").toLowerCase();
-            if (conditionalPlayerChoice5==="rock"
-            ||conditionalPlayerChoice5==="paper"
-            ||conditionalPlayerChoice5==="scissors"){
-            return conditionalPlayerChoice5;
-            } else {
-            playerChoice5()
-            }
-        }
-        const playerSelection5 = playerChoice5();
-        // computer's selection 5
-        function computerChoice5(){
-            let result=Math.random(); 
-            if (result<.34){
-                return "rock";
-            } else if (result<.67){
-                return "paper";
-            } else {
-                return "scissors";
-            }
-        }
-        const computerSelection5 = computerChoice5();
-    
-            if (playerSelection5 === computerSelection5){
-                alert("Tie! Please play again. Please type Rock, Paper or Scissors.");
-                round5();
-            } else if (playerSelection5 === "rock" && computerSelection5 === "scissors"
-            || playerSelection5 === "paper" && computerSelection5 === "rock"
-            || playerSelection5 === "scissors" && computerSelection5 === "paper"){
-                round++;
-                playerScore++;
-                alert("Player wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            } else {
-                round++;
-                computerScore++;
-                alert("Computer wins! Round: "+round+", Player: "+playerScore+", Computer: "+computerScore+".");
-            }
-    }
-    round5();
-}
-game()
-console.log("Round: "+round)
-console.log("Player Score: "+playerScore)
-console.log("Computer Score: "+computerScore)
-</script>
+    <div id="container">
+        <header>
+            <h1>Rock Paper Scissors Game</h1>
+            <h2>Choose Rock, Paper or Scissors</h2>
+        </header>
+        <div id="playerbtns">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div id="playerChoice">
+            <h2>Player Choice: <span id="pc"></span></h2>
+        </div>
+        <div id="computerChoice">
+            <h2>Computer Choice: <span id="cc"></span></h2>
+        </div>
+        <div id="Result">
+            <h2>Result: <span id="r"></span></h2>
+        </div>
+        <footer>
+            <h3>By Nyo Reeyo</h3>
+        </footer>
+    </div>
+    <script src="js.js"></script>
 </body>
+</html>
